@@ -5,6 +5,7 @@ from db import db
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 
+
 from models.tabledb import itemModel,storeModel,tagModel,itemTagsModel,userModel
 
 from resources.store import blueprint as storeblueprint  #to diffrentiate in case of multiple blueprints
