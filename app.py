@@ -4,7 +4,7 @@ from flask_smorest import Api
 from db import db 
 from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
-
+from dotenv import load_dotenv
 
 from models.tabledb import itemModel,storeModel,tagModel,itemTagsModel,userModel
 
@@ -21,6 +21,7 @@ from resources.user import blueprint as userblueprint
 db_url = None
 def create_app(db_url = None):  #db_url lets us create an app with a certain database URL, or alternatively try to fetch the database URL from the environment variables. The default value will be a local SQLite file, if we don't pass a value ourselves and it isn't in the environment.
     app = Flask(__name__)
+    load_dotenv()
     app.config["PROPAGATE_EXCEPTIONS"] = True
     app.config["API_TITLE"] = "Stores REST API"
     app.config["API_VERSION"] = "v1"
