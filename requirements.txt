@@ -1,8 +1,8 @@
 flask-smorest
 python-dotenv
 flask_restful
-#sqlalchamy
-#flask-sqlalchamy
+sqlalchamy
+flask-sqlalchamy
 flask-jwt-extended
 passlib
 flask-migrate
